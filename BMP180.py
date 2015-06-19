@@ -61,7 +61,7 @@ class BMP180:
 		    function_call = inspect.stack()[1][4][0].strip()
 
 		    # See if the function_call has "self." in the begining
-		    matched = re.match( '^self\.', function_call )
+		    matched = re.match( '.*self\.setSlaveAddress.*', function_call )
 		    if not matched :
 		        print 'This is Private Function, Go Away'
 		        return
@@ -76,7 +76,7 @@ class BMP180:
 		    function_call = inspect.stack()[1][4][0].strip()
 
 		    # See if the function_call has "self." in the begining
-		    matched = re.match( '^self\.', function_call )
+		    matched = re.match( '.*self\.writeReg.*', function_call )
 		    if not matched :
 		        print 'This is Private Function, Go Away'
 		        return
@@ -92,7 +92,7 @@ class BMP180:
 		    function_call = inspect.stack()[1][4][0].strip()
 
 		    # See if the function_call has "self." in the begining
-		    matched = re.match( '^self\.', function_call )
+		    matched = re.match( '.*self\.readReg.*', function_call )
 		    if not matched :
 		        print 'This is Private Function, Go Away'
 		        return
@@ -110,7 +110,7 @@ class BMP180:
 		    function_call = inspect.stack()[1][4][0].strip()
 
 		    # See if the function_call has "self." in the begining
-		    matched = re.match( '^self\.', function_call )
+		    matched = re.match( '.*self\.convertShort.*', function_call )
 		    if not matched :
 		        print 'This is Private Function, Go Away'
 		        return
@@ -127,7 +127,7 @@ class BMP180:
 		    function_call = inspect.stack()[1][4][0].strip()
 
 		    # See if the function_call has "self." in the begining
-		    matched = re.match( '^self\.', function_call )
+		    matched = re.match( '.*self\.readCalibration.*', function_call )
 		    if not matched :
 		        print 'This is Private Function, Go Away'
 		        return
@@ -168,7 +168,7 @@ class BMP180:
 		    function_call = inspect.stack()[1][4][0].strip()
 
 		    # See if the function_call has "self." in the begining
-		    matched = re.match( '^self\.', function_call )
+		    matched = re.match( '.*self\.startTempConversion.*', function_call )
 		    if not matched :
 		        print 'This is Private Function, Go Away'
 		        return
@@ -187,7 +187,7 @@ class BMP180:
 		    function_call = inspect.stack()[1][4][0].strip()
 
 		    # See if the function_call has "self." in the begining
-		    matched = re.match( '^self\.', function_call )
+		    matched = re.match( '.*self\.startPressureConversion.*', function_call )
 		    if not matched :
 		        print 'This is Private Function, Go Away'
 		        return
@@ -214,7 +214,7 @@ class BMP180:
 		    function_call = inspect.stack()[1][4][0].strip()
 
 		    # See if the function_call has "self." in the begining
-		    matched = re.match( '^self\.', function_call )
+		    matched = re.match( '.*self\.calculateTemperature.*', function_call )
 		    if not matched :
 		        print 'This is Private Function, Go Away'
 		        return
@@ -236,7 +236,7 @@ class BMP180:
 		    function_call = inspect.stack()[1][4][0].strip()
 
 		    # See if the function_call has "self." in the begining
-		    matched = re.match( '^self\.', function_call )
+		    matched = re.match( '.*self\.calculatePressure.*', function_call )
 		    if not matched :
 		        print 'This is Private Function, Go Away'
 		        return
